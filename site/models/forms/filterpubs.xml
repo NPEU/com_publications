@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form
+    addfieldpath="/components/com_publications/models/fields"
+>
+    <fields name="filter">
+        <fieldset
+            name="filter"
+            label="COM_PUBLICATIONS_JA_FILTER_LEGEND"
+        >
+            <field
+                name="keywords"
+                type="text"
+                label="COM_PUBLICATIONS_FILTER_LABEL"
+                description="COM_PUBLICATIONS_FILTER_DESC"
+                class="text-input  one-third  palm-one-whole"
+                default=""
+            />
+        </fieldset>
+    </fields>
+</form>
+<!--class="text-input  append-buttons  one-third"-->
