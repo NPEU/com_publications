@@ -16,4 +16,20 @@
             <tag>stable</tag>
         </tags>
     </update>
+    <update>
+        <name>NPEU: com_publications</name>
+        <description>Joomla! com_publications component</description>
+        <element>com_publications</element>
+        <type>component</type>
+        <version>1.1.0</version>
+        <client>administrator</client>
+        <infourl title="NPEU: com_publications">https://github.com/NPEU/com_publications/releases/tag/v1.1.0</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/NPEU/com_publications/archive/v1.1.0.zip</downloadurl>
+        </downloads>
+        <targetplatform name="joomla" />
+        <tags>
+            <tag>stable</tag>
+        </tags>
+    </update>
 </updates>
