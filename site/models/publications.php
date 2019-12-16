@@ -29,6 +29,12 @@ class PublicationsModelPublications extends JModelLegacy
         $base_url = JUri::base();
         return json_decode(file_get_contents($base_url . 'data/publications?type=Report&collect=year_desc'), true);
     }
+    
+    public function getAll()
+    {
+        $base_url = JUri::base();
+        return json_decode(file_get_contents($base_url . 'data/publications?collect=year_desc'), true);
+    }
 
     public function getFilteredArticles()
     {
@@ -36,10 +42,15 @@ class PublicationsModelPublications extends JModelLegacy
         return json_decode(file_get_contents($base_url . 'data/publications?type=Journal+Article&collect=year_desc&full_entry=' . urlencode(JFactory::getApplication()->input->get('keywords', '', 'STRING'))), true);
     }
 
-
     public function getFilteredReports()
     {
         $base_url = JUri::base();
         return json_decode(file_get_contents($base_url . 'data/publications?type=Report&collect=year_desc&full_entry=' . urlencode(JFactory::getApplication()->input->get('keywords', '', 'STRING'))), true);
+    }
+
+    public function getFilteredAll()
+    {
+        $base_url = JUri::base();
+        return json_decode(file_get_contents($base_url . 'data/publications?collect=year_desc&full_entry=' . urlencode(JFactory::getApplication()->input->get('keywords', '', 'STRING'))), true);
     }
 }

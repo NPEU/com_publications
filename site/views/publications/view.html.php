@@ -35,10 +35,12 @@ class PublicationsViewPublications extends JViewLegacy
         if (empty($keywords)) {
             $articles = $this->get('Articles');
             $reports = $this->get('Reports');
+            $all = $this->get('All');
         } else {
             $is_filtered = true;
             $articles = $this->get('FilteredArticles');
             $reports  = $this->get('FilteredReports');
+            $all  = $this->get('FilteredAll');
         }
 
         $app   = JFactory::getApplication();
@@ -83,6 +85,7 @@ class PublicationsViewPublications extends JViewLegacy
         // Assign data to the view
         $this->articles           = $articles;
         $this->reports            = $reports;
+        $this->all                = $all;
         $this->articles_total     = $articles_total;
         $this->reports_total      = $reports_total;
         $this->publications_total = $articles_total + $reports_total;
